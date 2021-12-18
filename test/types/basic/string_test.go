@@ -3,10 +3,12 @@ package basic
 import (
 	"fmt"
 	"github.com/stretchr/testify/assert"
+	"reflect"
 	"strconv"
 	"strings"
 	"testing"
 	"unicode"
+	"unicode/utf8"
 )
 
 func TestString(t *testing.T) {
@@ -17,7 +19,7 @@ func TestString(t *testing.T) {
 
 	s2 := "hello"
 	assert.Equal(t, "hello", s2)
-
+	assert.Equal(t, "int32", reflect.TypeOf('c').String())
 	//2.使用
 
 	//2.1 strings package, strings operation including contain, index, join ...
@@ -31,6 +33,12 @@ func TestString(t *testing.T) {
 	assert.True(t, unicode.IsLower('c'))
 	assert.True(t, unicode.IsDigit('1'))
 	assert.Equal(t, 'C', unicode.ToUpper('c'))
+
+	// difference between rune & byte
+	msg := "🐜"
+	assert.Equal(t, 4, len(msg))
+	assert.Equal(t, 1, utf8.RuneCountInString(msg))
+
 
 	//2.3 strconv, do string conversion, like conversion between number/bool type and string
 	result1, _ := strconv.ParseFloat("0.1", 64)
