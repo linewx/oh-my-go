@@ -1,4 +1,4 @@
-package basic
+package aggregate
 
 import (
 	"github.com/stretchr/testify/assert"

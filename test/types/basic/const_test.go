@@ -6,11 +6,14 @@ import (
 )
 
 func TestConst(t *testing.T) {
+
+	// 创建： 普通创建
 	const a int = 1
 	assert.Equal(t, 1, a, "a should 1")
 
 	// a = 2, compile error
 
+	// iota 创建
 	const (
 		MON int = iota + 1
 		TUS
