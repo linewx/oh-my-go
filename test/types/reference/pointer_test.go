@@ -7,8 +7,6 @@ import (
 
 func TestPointer(t *testing.T) {
 
-	//2.2
-
 	//1. 创建
 	a := 1
 	assert.Equal(t, 1, a)
