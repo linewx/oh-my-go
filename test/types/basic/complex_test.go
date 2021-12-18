@@ -14,10 +14,13 @@ func TestComplex(t *testing.T) {
 
 	c3 := 1 + 1i //字面量
 
+	c4 := complex(1, 2)
+
 	assert.Equal(t, "complex128", reflect.TypeOf(c1).String())
 	assert.Equal(t, "complex64", reflect.TypeOf(c2).String())
 
 	assert.Equal(t, "complex128", reflect.TypeOf(c3).String()) // 字面量默认类型
+	assert.Equal(t, "complex128", reflect.TypeOf(c4).String())
 
 	// assert.False(t, a64 == a32) mismatched types int64 and int32
 

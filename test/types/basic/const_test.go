@@ -2,6 +2,7 @@ package basic
 
 import (
 	"github.com/stretchr/testify/assert"
+	"math"
 	"testing"
 )
 
@@ -10,6 +11,17 @@ func TestConst(t *testing.T) {
 	// 创建： 普通创建
 	const a int = 1
 	assert.Equal(t, 1, a, "a should 1")
+
+	const b = 2
+	assert.Equal(t, 2, b)
+
+	const (
+		width,height = 600,320
+		cells = 100
+		angle = math.Pi/6
+	)
+
+
 
 	// a = 2, compile error
 
