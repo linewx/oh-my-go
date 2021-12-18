@@ -45,4 +45,11 @@ func TestConst(t *testing.T) {
 	assert.Equal(t, b1, 1)
 	assert.Equal(t, b2, 2)
 	assert.Equal(t, b3, 3)
+
+	//无类型常量
+	c1 := 1 //无类型常量
+	assert.Equal(t, c1, 1)
+
+	var c2 float32 = 'a' //无类型常量
+	assert.NotEqual(t, c2, 'a')
 }
