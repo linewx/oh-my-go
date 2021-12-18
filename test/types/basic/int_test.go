@@ -14,10 +14,12 @@ func TestInt(t *testing.T) {
 	var a32 int32 = 1
 	var a64 int64 = 1
 	var r rune = 1
+	var p uintptr = 1
 	assert.True(t, a32 == 1)
 	assert.True(t, a64 == 1)
 	assert.True(t, a64 > 0)
 	assert.True(t, r == 1)
+	assert.True(t, p == 1)
 
 	// assert.False(t, a64 == a32) mismatched types int64 and int32
 
