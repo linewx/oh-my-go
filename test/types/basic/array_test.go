@@ -1,4 +1,4 @@
-package main
+package basic
 
 import (
 	"github.com/stretchr/testify/assert"
@@ -19,7 +19,5 @@ func TestArray(t *testing.T) {
 	assert.Equal(t, 3, len(array2), "the length of array should be array1")
 	assert.Equal(t, 0, array3[0], "the first element of array should be 0")
 	assert.Equal(t, 0, array3[2], "the first element of array should be 0")
-
-
 
 }
