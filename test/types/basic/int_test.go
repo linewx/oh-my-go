@@ -20,6 +20,13 @@ func TestInt(t *testing.T) {
 	assert.True(t, a64 > 0)
 	assert.True(t, r == 1)
 	assert.True(t, p == 1)
+	assert.Equal(t, 1, int(1))
+	assert.Equal(t, 1, int(a32))
+	assert.NotEqual(t, 1, a32)
+
+	assert.Equal(t, 1, int(a64))
+	assert.NotEqual(t, 1, a64)
+
 
 	// assert.False(t, a64 == a32) mismatched types int64 and int32
 
