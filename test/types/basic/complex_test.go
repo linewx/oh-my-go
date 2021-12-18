@@ -8,7 +8,7 @@ import (
 
 func TestComplex(t *testing.T) {
 
-	// 创建： 普通创建
+	//1.创建： 普通创建
 	var c1 complex128
 	var c2 complex64
 
