@@ -20,7 +20,10 @@ func TestComplex(t *testing.T) {
 	assert.Equal(t, "complex64", reflect.TypeOf(c2).String())
 
 	assert.Equal(t, "complex128", reflect.TypeOf(c3).String()) // 字面量默认类型
+
 	assert.Equal(t, "complex128", reflect.TypeOf(c4).String())
+	assert.Equal(t, float64(1), real(c4)) //实数部分
+	assert.Equal(t, float64(2), imag(c4)) //虚数部分
 
 	// assert.False(t, a64 == a32) mismatched types int64 and int32
 
