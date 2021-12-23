@@ -17,7 +17,7 @@ func hello(p *string) {
 }
 
 //1.3 命名返回值
-func add2(x int, y int)(result int) {
+func add2(x int, y int) (result int) {
 	result = x + y
 	return //省略了返回值
 }
@@ -28,9 +28,9 @@ func accept(content string, visit func(string) string) string {
 }
 
 //1.5 可变参数
-func addn(vars... int) int {
+func addn(vars ...int) int {
 	result := 0
-	for _,value := range vars {
+	for _, value := range vars {
 		result += value
 	}
 	return result
@@ -39,7 +39,7 @@ func addn(vars... int) int {
 //1.6 多返回值
 func stats(x int, y int) (sum int, mean float64) {
 	sum = x + y
-	mean = (float64)(x + y)/2
+	mean = (float64)(x+y) / 2
 
 	return
 }
@@ -51,17 +51,18 @@ func TestFunction(t *testing.T) {
 	hello(&s1)
 	assert.Equal(t, "hello Jack", s1)
 
-	assert.Equal(t, 3, add2(1,2))
+	assert.Equal(t, 3, add2(1, 2))
 
 	//匿名函数
-	assert.Equal(t, "hello Jack", accept("Jack", func(target string) string{
+	assert.Equal(t, "hello Jack", accept("Jack", func(target string) string {
 		return "hello " + target
 	}))
 
-	assert.Equal(t, 10, addn(1,2,3,4))
+	assert.Equal(t, 10, addn(1, 2, 3, 4))
 
-	sum,mean := stats(1,2)
+	sum, mean := stats(1, 2)
 	assert.Equal(t, 3, sum)
 	assert.Equal(t, 1.5, mean)
 
 }
+
