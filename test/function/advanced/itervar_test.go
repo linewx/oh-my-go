@@ -91,5 +91,4 @@ func TestIterVar(t *testing.T) {
 	fmt.Println("iter var with defer fix2 ...")
 	iterVarWithDeferFix2()
 
-
 }
