@@ -83,10 +83,7 @@ func TestMethod(t *testing.T) {
 	assert.True(t, adultFunc(jack))
 	assert.False(t,  adultFunc(allen))
 
-
-
-
-
+	//2.4 包的封装，通过小写成员变量和大写方法来实现封装
 }
 
 
