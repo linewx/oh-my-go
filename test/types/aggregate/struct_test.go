@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+
 func TestStruct(t *testing.T) {
 	//1. 创建
 	//1.1 创建Struct Type
@@ -64,6 +65,6 @@ func TestStruct(t *testing.T) {
 
 	assert.Equal(t, "R&D", department.name)
 	assert.Equal(t, "development", department.description)
-	assert.Equal(t, "minhang", department.addr)
+	assert.Equal(t, "minhang", department.addr) //直接调用了匿名成员的变量
 
 }
