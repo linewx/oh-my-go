@@ -42,7 +42,4 @@ func TestArray(t *testing.T) {
 	a2 := []int{1,2,3}
 	assert.Equal(t, a1, a2) //值对比，非指针对比
 
-
-
-
 }
